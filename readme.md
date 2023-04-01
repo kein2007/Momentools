@@ -19,11 +19,13 @@
 ### chat GPT
   V.1.0. API연동 : openai.com
 
+  V.1.1. 깃허브 API key 노출 문제로인한 API key 삭제.
+
 
 ### API Key
   V.1.0. api key 깃 허브 업로드 제외 처리.
   
-  V.1.1. api key 난독화 처리.
+  V.1.1. api key 난독화 처리 및 깃허브 업로드. open AI 제외.
 
 
 ### 구글 검색창
