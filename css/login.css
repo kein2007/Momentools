@@ -1,0 +1,158 @@
+#login-body {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #23242a ;
+}
+
+#login-form {
+    position: relative;
+    width: 380px;
+    height: 420px;
+    background: #1c1c1c;
+    border-radius: 8px;
+    overflow: hidden; /* 테두리 바깥부분 자르기 */
+}
+
+/* 테두리 회전 영역 만들기 */
+#login-form::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,#45f3ff,#45f3ff);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+
+/* 테두리 회전영역 양 사이드에서 회전 */
+#login-form::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,#45f3ff,#45f3ff);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#login-box {
+    position: absolute;
+    inset: 2px;
+    border-radius: 8px;
+    background: #28292d;
+    z-index: 10;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@keyframes Logo-Rotate {
+    0% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(180deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+#login-box img {
+    height: 150px;
+    width: 150px;
+    margin-bottom: 25px;
+    animation: Logo-Rotate 2s linear infinite;
+}
+
+#login-box__input {
+    position: relative;
+    width: 300px;
+    margin-top: 35px;
+}
+
+#login-box__input  input {
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #23242a;   
+    text-align: center; 
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    z-index: 10;
+}
+#login-box__input span {
+    position: absolute;
+    left:10px;
+    top:0;
+    padding: 20px 0px 10px;
+    font-size: 1em;
+    color:#23242a;
+    pointer-events: none;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+
+#login-box__input input:valid ~ span,
+#login-box__input input:focus ~ span {
+    color: #45f3ff;
+    transform: translateY(-34px);
+    font-size: 0.75em;
+}
+
+#login-box__input i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #45f3ff;
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+#login-box__input input:valid ~ i,
+#login-box__input input:focus ~ i {
+    height: 44px;
+}
+
+#login-box__submit {
+    border: none;
+    outline: none;
+    background: #45f3ff;
+    padding: 11px 25px;
+    width: 100%;
+    margin-top: 25px;
+    border-radius: 4px;
+    cursor: pointer;    
+    font-size: 18px;
+}
+
+#login-box__submit:active {
+    opacity: 0.8;
+}
+

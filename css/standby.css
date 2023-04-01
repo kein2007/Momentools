@@ -1,0 +1,52 @@
+#standby-screen {    
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+    background-size: cover;
+    background-color: #595959;    
+    z-index: -1;
+}
+
+@keyframes Blinker {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#standby__txt {
+    font-size: 50px;
+    color: whitesmoke;
+    margin-bottom: 50px;
+    animation: Blinker 2s linear infinite;
+}
+
+#standby__clock {
+    font-size: 150px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    color: white;
+}
+
+#standby__today {
+    font-size: 50px;
+    font-weight: 600;
+    color: white;
+}
+

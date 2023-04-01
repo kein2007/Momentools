@@ -1,0 +1,117 @@
+@import "reset.css";
+@import "login.css";
+@import "standby.css";
+@import "todo.css";
+@import "search.css";
+@import "chatgpt.css";
+
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Nanum+Pen+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+
+
+body {
+    background-color:#565656;
+    background-size: cover;
+    font-family: 'Do Hyeon', sans-serif;
+}
+
+.hidden {
+    display: none;
+}
+
+/* 공통 글자색 */
+#greeting,
+.clock,
+.today,
+#quote {
+  color: whitesmoke;
+}
+
+/* Logo */
+.logo {
+    position: absolute;
+    top:5%;
+    left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    animation: Logo-Rotate 2s linear infinite;
+}
+.logo-title {    
+    color: white;
+}
+.logo-title div:first-child {    
+    font-size: 25px;
+    color: gold;
+}
+
+
+/* 사용자 */
+#greeting {
+    position: absolute;
+    top:15%;
+    left: 20px;
+    font-size: 25px;        
+    transform: translate(0, -50%);
+}
+
+/* 날씨 */
+#weather {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top:15%;
+    left: 300px;
+    color: white;
+    font-size: 20px;    
+    transform: translate(0, -50%);
+  }
+  
+
+/* 오늘 날자 및 시계(메인화면 섹션) */
+.get-date {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.get-date h2 {
+    font-size: 100px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.get-date h3 {
+    font-size: 40px;
+    font-weight: 400;
+}
+
+/* 명언 스타일 */
+footer {
+    position: absolute;    
+    bottom: 3%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   }
+   #quote {
+    color: limegreen;
+   }
+   #quote q {
+    margin-right: 20px;
+    font-size: 20px;
+    font-weight: 500;  
+   }  
+   #quote cite {
+    font-style: italic;
+   } 

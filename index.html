@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" sizes="16x16 32x32 64x64" href="img/MOT_logo.png">
+    <title>MomenTools</title>    
+  </head>
+
+<body>
+  <!-- Log In Screen -->
+   <div id="login">
+    <div id="login-body">
+      <form id="login-form" >
+        <div id="login-box">
+          <img src="img/MOT_logo.png"/>          
+          <div id="login-box__input" >
+            <input required maxlength="15" type="text" placeholder="Username" />           
+            <span>Username</span> 
+            <i></i>            
+          </div>
+          <input id="login-box__submit" type="submit" value="Access"/>
+        </div>
+      </form>
+    </div>    
+  </div>
+
+<!-- 대기 화면 -->
+  <div id="standby" class="hidden">
+    <div id="standby-screen">
+        <span id="standby__txt">입력 대기중</span>
+        <span id="standby__clock">00:00:00</span>
+        <span id="standby__today"></span>  
+    </div>
+   </div>
+
+<main>
+  <!-- Logo -->
+  <div class="logo">
+    <img src="img/MOT_logo.png" />
+    <div class="logo-title">
+      <div>MomenTools</div>
+      <div>Momentum Of Tools</div>
+    </div>
+  </div>
+  <!-- Greeting Message -->
+  <h1 id="greeting" class="hidden" ></h1>
+
+  <!-- Clock -->
+  <section class="get-date">
+    <h2 class="clock">00:00:00</h2>
+    <h3 class="today"></h3>
+  </section>
+
+  <!-- Weather -->
+  <div id="weather">
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- To do List -->
+  <section id="todo">
+    <img class="todo-board" src="img/Clipboard.png" />
+    <form id="todo-form">
+      <span>오늘의 할 일</span>
+      <input type="text" placeholder="Write a To Do and Press Enter." required />
+      <i></i>
+    </form>
+    <ul id="todo-list"></ul>
+  </section>
+
+  <!-- 구글 검색창 및 링크 모음-->
+  <section class="search">
+    <form class="search__bar">      
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input class="search__bar-txt" required maxlength="255" value="" placeholder="검색어를 입력해 주세요.">
+      <button class="search__bar-btn" type="submit"><img src="img/google_logo.svg"/></button>
+    </form>
+    <div class="linkset">
+      <div class="linkset__link"><a href="https://www.google.co.kr/"><img src="img/google_logo.png" alt="Google"/><span>Google</span></a></div>
+      <div class="linkset__link"><a href="http://https://www.naver.com/"><img src="img/neaver_icon.png"alt="Naver"/><span>Naver</span></a></div>
+      <div class="linkset__link"><a href="https://www.daum.net/"><img src="img/daum_icon2.png" alt="Daum"/><span>Daum</span></a></div>
+      <div class="linkset__link"><a href="https://nomadcoders.co/courses"><img src="img/nomad_icon.svg" alt="Nomad Coder"/><span>Nomad Coder</span></a></div>
+      <div class="linkset__link"><a href="https://developer.mozilla.org/ko/"><img src="img/mdnplusicon_400x400.png" alt="MDN"/><span>MDN+</span></a></div>
+    </div>
+    <div class="linkset">
+      <div class="linkset__link"><a href="https://chat.openai.com/chat"><img src="img/ChatGPT_logo.svg" alt="ChatGPT"/><span>Chat GPT</span></a></div>
+      <div class="linkset__link"><a href="https://www.youtube.com/"><img src="img/youTube_icon.png" alt="YouTube"/><span>Youtube</span></a></div>
+      <div class="linkset__link"><a href="hhttps://www.netflix.com/"><img src="img/netflix-logo-icon.png" alt="Netflix"/><span>Netflix</span></a></div>
+      <div class="linkset__link"><a href="http://#"><img src="img/plus_thumnail.png" alt="None"/><span></span></a></div>
+      <div class="linkset__link"><a href="http://#"><img src="img/plus_thumnail.png" alt="None"/><span></span></a></div>
+    </div>
+  </section>
+
+  <!-- chatGPT 채팅창 -->
+  <section class="chatgpt">
+    <div id="chat">
+      <div id="chat-header">
+        <img src="img/ChatGPT_logo.svg" />
+        <h2>Chat with ChatGPT</h2>
+      </div>
+      <form id="chat-form">
+        <input id="chat-input" type="text" placeholder="Type your message here...">
+        <button type="submit"><i class="fa-regular fa-paper-plane"></i></button>
+      </form>
+      <div id="chat-messages">
+      </div>
+     </div>
+  </section>
+</main>>
+
+<footer>
+<!-- Quote -->
+    <div id="quote">
+      <q></q>
+      <cite></cite>
+    </div>
+ </footer>
+  <script src="js/apikey.js"></script>
+  <script src="js/login.js"></script>
+  <script src="js/clock.js"></script>
+  <script src="js/quote.js"></script>
+  <script src="js/backgrounds.js"></script>
+  <script src="js/todo.js"></script>
+  <script src="js/weather.js"></script>
+  <script src="js/chatgpt.js"></script>
+  <script src="js/standby.js"></script>  
+  <script src="js/search.js"></script>
+  <script
+  src="https://kit.fontawesome.com/a9f8820035.js"
+  crossorigin="anonymous"
+></script>
+  </body>
+</html>
